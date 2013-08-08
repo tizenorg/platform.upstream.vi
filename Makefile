@@ -79,7 +79,7 @@
 # Destinations for installation. $(PRESERVEDIR) is used for recovery files.
 # It will get mode 1777.
 #
-PREFIX		= /usr/local
+PREFIX		= /usr
 BINDIR		= $(PREFIX)/bin
 LIBEXECDIR	= $(PREFIX)/libexec
 MANDIR		= $(PREFIX)/share/man
@@ -94,7 +94,7 @@ DESTDIR		=
 #
 # A BSD-like install program. GNU install will fit well here, too.
 #
-INSTALL		= /usr/ucb/install
+INSTALL		= /usr/bin/install
 
 #
 # Compiler and linker flags.
@@ -235,7 +235,7 @@ MALLOC=mapmalloc.o
 
 #WARN	= -Wall -Wno-parentheses -Werror
 
-STRIP = -s
+STRIP =
 RECOVER	= -DEXRECOVER=\"$(LIBEXECDIR)/exrecover\" \
 			-DEXPRESERVE=\"$(LIBEXECDIR)/expreserve\"
 CCFLAGS	= $(CFLAGS) $(WARN) $(CPPFLAGS) $(FEATURES) $(CHARSET) $(OSTYPE) \
